@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_home_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackGround">
+
+    <com.vains.alipay_home_effect.widgets.APHeaderView
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.vains.alipay_home_effect.widgets.APSnapView
+            android:id="@id/my_snap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:id="@+id/top_ly"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/home_top_tv_saoma"
+                    style="@style/home_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/home_saoma"
+                    android:gravity="center_horizontal"
+                    android:text="扫码" />
+
+                <TextView
+                    android:id="@+id/home_top_tv_register"
+                    style="@style/home_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/home_register"
+                    android:gravity="center_horizontal"
+                    android:text="注册" />
+
+                <TextView
+                    android:id="@+id/home_top_tv_zhuangxiang"
+                    style="@style/home_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/home_zhuangxiang"
+                    android:gravity="center_horizontal"
+                    android:text="收钱" />
+
+                <TextView
+                    android:id="@+id/home_top_tv_dengji"
+                    style="@style/home_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/home_dengj"
+                    android:gravity="center_horizontal"
+                    android:text="卡包" />
+            </LinearLayout>
+
+        </com.vains.alipay_home_effect.widgets.APSnapView>
+
+        <com.vains.alipay_home_effect.widgets.APBarView
+            android:id="@id/my_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:id="@+id/top_bar_ly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/home_top_tv_saoma1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_saoma" />
+
+                    <ImageButton
+                        android:id="@+id/home_top_tv_register1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_register" />
+
+                    <ImageButton
+                        android:id="@+id/home_top_tv_zhuangxiang1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_zhuangxiang" />
+
+                    <ImageButton
+                        android:id="@+id/home_top_tv_dengji1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_dengj" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/toolbar_menu"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+            <include layout="@layout/my_toolbar" />
+        </com.vains.alipay_home_effect.widgets.APBarView>
+    </com.vains.alipay_home_effect.widgets.APHeaderView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_bottom_rcy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="com.vains.alipay_home_effect.widgets.APScrollingBehavior"/>
+</android.support.design.widget.CoordinatorLayout>
